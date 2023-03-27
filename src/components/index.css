@@ -1,3 +1,6 @@
+body{
+  background-color: #fff;
+}
 .nav {
   position: fixed;
   top: 0;
@@ -12,6 +15,7 @@
 
 .logo {
   margin-left: 20px;
+  color: #000;
 }
 
 .nav ul {
@@ -28,7 +32,25 @@
 
 .nav li a {
   text-decoration: none;
-  color: #333;
+  color: #000
+  ;
   font-weight: bold;
   font-size: 16px;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.text-section {
+  width: 50%;
+  margin-right: 50px;
 }
