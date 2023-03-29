@@ -5,7 +5,7 @@ import "./components/index.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Service";
-
+import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
@@ -13,6 +13,7 @@ function App() {
       <Home />
       <About />
       <Services />
+      <Footer/>
     </Router>
   );
 }
