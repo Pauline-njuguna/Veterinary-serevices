@@ -1,32 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
-// import Signup from "./Signup"
 
 function Navbar() {
   return (
-    <nav class="nav">
-        <h1 class="logo">M-VET</h1>
+    <nav className="nav">
+      <h1 className="logo">M-VET</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <a href="#about">About</a>
         </li>
         <li>
-          <Link to="/services">Services</Link>
-        </li>
-        {/* <li>
-          <Link to="/signup-login">Sign up/Login</Link>
-        </li> */}
-        <li>
-          <Link to="/appointments">Appointments</Link>
+          <a href="#services">Services</a>
         </li>
         <li>
-          <a>
-            <button type="submit">Sign up</button>
-          </a>
+          <a href="#contacts">Contacts</a>
+        </li>
+        <li>
+          <button className="signup-btns">
+            <Link to="/signup-login">Sign up</Link>
+          </button>
         </li>
       </ul>
     </nav>

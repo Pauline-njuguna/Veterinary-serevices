@@ -16,7 +16,6 @@ body{
 .logo {
   margin-left: 20px;
   color: #000;
-  background-color: white;
 }
 
 .nav ul {
@@ -54,4 +53,18 @@ body{
 .text-section {
   width: 50%;
   margin-right: 50px;
+}
+.signup-btns {
+  background-color: #0095c6;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btns:hover {
+  background-color: #0077b3;
 }
