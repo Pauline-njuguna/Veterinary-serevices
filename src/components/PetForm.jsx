@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import "./index.css";
 
 const PetForm = () => {
-  const [Name, setName] = useState("");
-
   const [breed, setBreed] = useState("");
   const [age, setAge] = useState("");
+  const [name, setName] = useState("");
   const [species, setSpecies] = useState("");
-  // const [category, setCategory] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -16,7 +14,7 @@ const PetForm = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/pets", {
+      const response = await fetch("http://localhost:3000/pets", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,9 +22,8 @@ const PetForm = () => {
         body: JSON.stringify({
           breed,
           age,
-          gender,
-          // color,
-          // category,
+          name,
+          species,
         }),
       });
 
@@ -36,9 +33,8 @@ const PetForm = () => {
 
       setBreed("");
       setAge("");
-      setGender("");
-      // setColor("");
-      // setCategory("");
+      setName("");
+      setSpecies("");
       setIsLoading(false);
       setErrorMessage("");
     } catch (error) {
@@ -49,6 +45,15 @@ const PetForm = () => {
 
   return (
     <form className="pet-form" onSubmit={handleSubmit}>
+      <label className="pet-form-label">
+        Name:
+        <input
+          className="pet-form-input"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
       <label className="pet-form-label">
         Breed:
         <input
@@ -67,25 +72,17 @@ const PetForm = () => {
           onChange={(e) => setAge(e.target.value)}
         />
       </label>
+
       <label className="pet-form-label">
-        Gender:
+        Species:
         <input
           className="pet-form-input"
           type="text"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
+          value={species}
+          onChange={(e) => setSpecies(e.target.value)}
         />
       </label>
       {/* <label className="pet-form-label">
-        Color:
-        <input
-          className="pet-form-input"
-          type="text"
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-        />
-      </label>
-      <label className="pet-form-label">
         Category:
         <input
           className="pet-form-input"
