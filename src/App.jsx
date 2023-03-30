@@ -5,6 +5,7 @@ import "./components/index.css";
 import Home from "./components/Home";
 import Petform from "./components/PetForm";
 import AppointmentForm from "./components/AppointmentForm";
+import AppointmentCalendar from "./components/AppointmentCalendar";
 // import SignUp from "./components/Signup"
 // import LogIn from "./components/Login"
 
@@ -18,6 +19,7 @@ function App() {
         {/* <Route exact path="/login" element={<LogIn />} /> */}
         <Route exact path="/appointments" element={<AppointmentForm />} />
         <Route exact path="/petform" element={<Petform />} />
+        <Route exact path="/appointmentcalendar" element={<AppointmentCalendar />} />
       </Routes>
     </>
   );
