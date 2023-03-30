@@ -6,7 +6,7 @@ import React from "react";
 
 function Services() {
   return (
-    <div>
+    <div id="services">
       <h1>Our Services</h1>
       <div>
         {/* <img src={preventiveCareImage} alt="Preventive Care" /> */}

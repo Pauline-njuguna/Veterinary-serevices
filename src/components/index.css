@@ -16,7 +16,6 @@ body{
 .logo {
   margin-left: 20px;
   color: #000;
-  background-color: white;
 }
 
 .nav ul {
@@ -54,4 +53,129 @@ body{
 .text-section {
   width: 50%;
   margin-right: 50px;
+}
+/* footer */
+
+.footer{
+  display: flex;
+  background-color: rgb(17, 17, 17);
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 30px 0 20px;
+  margin-top: 25px;
+
+}
+.footer p{
+  color: white;
+
+}
+.footer h3{
+  color: white;
+  margin-bottom: 20px;
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3,.footer-col-4{
+  flex-basis:12%;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+
+.footer hr{
+  border: none;
+  background: white;
+  height: 1px;
+  margin: 20px 0;
+
+}
+.copyright{
+  text-align: center;
+}
+
+
+.signup-btns {
+  background-color: #0095c6;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btns:hover {
+  background-color: #0077b3;
+}
+
+/* index.css */
+
+.Contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.Contacts h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.Contacts form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.Contacts label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.Contacts input,
+.Contacts textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.Contacts textarea {
+  height: 5rem;
+}
+
+.Contacts button {
+  background-color: #0095c6;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Contacts button:hover {
+  background-color: #6a6e99;
 }
