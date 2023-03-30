@@ -39,9 +39,11 @@ function AppointmentForm() {
           onChange={(e) => setSelectedService(e.target.value)}
         >
           <option value="">Select a service</option>
-          <option value="surgery">Surgery</option>
+          <option value="surgery">Dental Care</option>
+          <option value="surgery">Preventive Care</option>
+
           <option value="consultancy">Consultancy</option>
-          <option value="allergies">Allergies</option>
+          <option value="allergies">Surgery</option>
         </select>
       </div>
       <button type="submit">Submit</button>

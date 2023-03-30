@@ -36,7 +36,7 @@ function Signup() {
 
   return (
     <div className="cover">
-      <h1>Register</h1>
+      <h1>Sign Up</h1>
       <form onSubmit={handleRegister}>
         <div className="names">
           {/* First name input box */}
@@ -94,7 +94,7 @@ function Signup() {
         </div>
         {/* Register button */}
         <button type="submit" className="signup-btn">
-          Regiter
+          Sign Up
         </button>
         {/* Error message */}
         <div>{error}</div>

@@ -1,8 +1,9 @@
 import React from "react";
+import "./index.css"
 
 function About() {
   return (
-    <div id="about">
+    <div id="about" className="about-page">
       <h1>About Our Veterinary Service</h1>
       <h2>Our Mission</h2>
       <p>
