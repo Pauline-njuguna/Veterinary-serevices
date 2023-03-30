@@ -7,6 +7,7 @@ import Petform from "./components/PetForm";
 import AppointmentForm from "./components/AppointmentForm";
 import SignUp from "./components/Signup/Signup"
 import LogIn from "./components/Signup/Login"
+import Contacts from "./components/Contacts"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/appointments" element={<AppointmentForm />} />
         <Route exact path="/petform" element={<Petform />} />
+        <Route exact path="/contacts" element={<Contacts />} />
       </Routes>
     </>
   );
