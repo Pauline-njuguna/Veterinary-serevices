@@ -8,14 +8,31 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async (event) => {
-    event.preventDefault(); // Prevents form from submitting
-    try {
-      // Handle login logic here
-    } catch (error) {
-      setError(error.message); // Sets error message if an error occurs
-    }
-  };
+ const handleLogin = async (event) => {
+   event.preventDefault(); // Prevents form from submitting
+   try {
+     const response = await fetch("http://localhost:3000/users/register", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify({
+         email: email,
+         password: password,
+       }),
+     });
+
+     if (!response.ok) {
+       const errorData = await response.json();
+       throw new Error(errorData.message);
+     }
+
+     // TODO: Handle successful login
+   } catch (error) {
+     setError(error.message); // Sets error message if an error occurs
+   }
+ };
+
 
   // Function to handle input changes and add/remove CSS class accordingly
   const handleInputChange = (e) => {

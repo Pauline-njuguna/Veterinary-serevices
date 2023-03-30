@@ -35,7 +35,7 @@ function AppointmentForm() {
       <div className="form-group">
         <label htmlFor="services">Select a Service:</label>
         <select
-        className="services"
+          className="services"
           value={selectedService}
           onChange={(e) => setSelectedService(e.target.value)}
         >
@@ -45,6 +45,7 @@ function AppointmentForm() {
           <option value="consultancy">Consultancy</option>
           <option value="surgery">Surgery</option>
           <option value="allergies">Allergies</option>
+          <option value="grooming">Grooming</option>
         </select>
       </div>
       <button type="submit">Submit</button>

@@ -3,73 +3,37 @@ import "./index.css";
 
 function Footer() {
   return (
-    <div
-      id="contact"
-      className="footer"
-      style={{ backgroundColor: "#000", color: "#fff" }}
-    >
-      <a id="jumpHere"></a>
-
-      <div
-        className="container"
-        style={{ display: "flex", flexDirection: "row" }}
-      >
-        <div className="footer-col-3" style={{ color: "#fff" }}>
-          <h3>Contact Us</h3>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            <li> +254724123456 Nairobi </li>
-            <li> +254712345678 Ngong </li>
-            <li>
-              email <a href="">groupone@gmail.com</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer-col-3" style={{ color: "#fff" }}>
-          <h3>Location</h3>
-          <p>
-            We are located along <br />
-            Magadi Road Dolpin Plaza <br />
-            Ground Floor G10
-          </p>
-        </div>
-
-        <div className="footer-col-4" style={{ color: "#fff" }}>
-          <h3>Follow us</h3>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            <li>
-              <a href="https://www.facebook.com/" style={{ color: "#fff" }}>
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/i/flow/login"
-                style={{ color: "#fff" }}
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/accounts/login/"
-                style={{ color: "#fff" }}
-              >
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/" style={{ color: "#fff" }}>
-                YouTube
-              </a>
-            </li>
-          </ul>
-        </div>
+    <div id="footer" className="footer">
+      <div className="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Phone: +254724123456</li>
+          <li>Email: groupone@gmail.com</li>
+        </ul>
       </div>
-
-      <p style={{ textAlign: "center", marginTop: "20px" }}>
-        copright@2023-Group one
-      </p>
+      <div className="footer-section">
+        <h3>Location</h3>
+        <p>Magadi Road Dolphin Plaza, Ground Floor G10, Nairobi, Kenya</p>
+      </div>
+      <div className="footer-section">
+        <h3>Follow Us</h3>
+        <ul className="social-media">
+          
+            <li>
+              <a href="https://www.facebook.com/">Facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/i/flow/login">Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/accounts/login/">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/">YouTube</a>
+            </li>
+          </ul>
+  
+      </div>
     </div>
   );
 }

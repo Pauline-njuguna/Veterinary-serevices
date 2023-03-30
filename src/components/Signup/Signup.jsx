@@ -12,17 +12,35 @@ function Signup() {
   const [error, setError] = useState("");
 
   // Function to handle registration form submission
-  const handleRegister = async (event) => {
-    event.preventDefault(); // prevent default form submission behavior
-    try {
-      // TODO: add logic for registering user with backend API
-    } catch (error) {
-      // If an error occurs during registration, set the error state variable
-      setError(error.message);
-    }
-  };
+// Function to handle registration form submission
+const handleRegister = async (event) => {
+  event.preventDefault(); // prevent default form submission behavior
+  try {
+    const response = await fetch("http://localhost:3000/users/register", { // Update fetch URL
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName: fname,
+        lastName: lname,
+        email: email,
+        password: password,
+      }),
+    });
 
-  // Function to handle input changes and add/remove "has-value" class to input boxes
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message);
+    }
+
+    // TODO: Handle successful registration
+  } catch (error) {
+    // If an error occurs during registration, set the error state variable
+    setError(error.message);
+  }
+};
+// ion to handle input changes and add/remove "has-value" class to input boxes
   const handleInputChange = (e) => {
     const input = e.target;
     if (input.value) {

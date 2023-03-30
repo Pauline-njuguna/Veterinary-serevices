@@ -6,8 +6,8 @@ function Navbar() {
   return (
     <nav className="nav">
       <div className="logo">
-      <img  src="src/components/image/cat logo.jpg" alt="logo"></img>
-      <h1 className="logo">M-VET</h1>
+        <img src="src/components/image/cat logo.jpg" alt="logo"></img>
+        <h1 className="logo">M-VET</h1>
       </div>
       <ul>
         <li>
@@ -21,6 +21,12 @@ function Navbar() {
         </li>
         <li>
           <Link to="/appointments">Appointments</Link>
+        </li>
+        <li>
+          <Link to="/pet">Add pet</Link>
+        </li>
+        <li>
+          <Link to="/calendar">Calendar</Link>
         </li>
         {/* <li>
           <a href="#contacts">Contacts Us</a>

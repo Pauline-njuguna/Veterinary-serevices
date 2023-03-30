@@ -23,10 +23,10 @@ function App() {
         <Route exact path="/signup-login" element={<SignUp />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/appointments" element={<AppointmentForm />} />
-        <Route exact path="/petform" element={<Petform />} />
+        <Route exact path="/pet" element={<Petform />} />
         <Route
           exact
-          path="/appointmentcalendar"
+          path="/calendar"
           element={<AppointmentCalendar />}
         />
         <Route exact path="/contacts" element={<Contacts />} />
