@@ -8,17 +8,20 @@ function Navbar() {
       <h1 className="logo">M-VET</h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about">About Us</a>
         </li>
         <li>
           <a href="#services">Services</a>
         </li>
         <li>
-          <a href="#contacts">Contacts</a>
+          <Link to="/contacts">Contact</Link>
         </li>
+        {/* <li>
+          <a href="#contacts">Contacts Us</a>
+        </li> */}
         <li>
           <button className="signup-btns">
             <Link to="/signup-login">Sign up</Link>
