@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.css";
 
 function AppointmentForm() {
   const [name, setName] = useState("");
@@ -11,9 +12,9 @@ function AppointmentForm() {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <div>
-        <h1>Appointment</h1>
+    <form onSubmit={handleFormSubmit} className="appointment-form">
+      <h1>Appointment</h1>
+      <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -22,7 +23,7 @@ function AppointmentForm() {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="phoneNumber">Phone Number:</label>
         <input
           type="tel"
@@ -31,19 +32,19 @@ function AppointmentForm() {
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="services">Select a Service:</label>
         <select
-          id="services"
+        className="services"
           value={selectedService}
           onChange={(e) => setSelectedService(e.target.value)}
         >
           <option value="">Select a service</option>
-          <option value="surgery">Dental Care</option>
-          <option value="surgery">Preventive Care</option>
-
+          <option value="dental">Dental Care</option>
+          <option value="preventive">Preventive Care</option>
           <option value="consultancy">Consultancy</option>
-          <option value="allergies">Surgery</option>
+          <option value="surgery">Surgery</option>
+          <option value="allergies">Allergies</option>
         </select>
       </div>
       <button type="submit">Submit</button>

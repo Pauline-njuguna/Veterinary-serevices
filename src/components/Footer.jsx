@@ -14,9 +14,9 @@ function Footer() {
         className="container"
         style={{ display: "flex", flexDirection: "row" }}
       >
-        <div className="footer-col-3">
+        <div className="footer-col-3" style={{ color: "#fff" }}>
           <h3>Contact Us</h3>
-          <ul style={{ listStyle: "none", padding: 1, color: "#fff" }}>
+          <ul style={{ listStyle: "none", padding: 0 }}>
             <li> +254724123456 Nairobi </li>
             <li> +254712345678 Ngong </li>
             <li>
@@ -25,7 +25,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="footer-col-3">
+        <div className="footer-col-3" style={{ color: "#fff" }}>
           <h3>Location</h3>
           <p>
             We are located along <br />
@@ -34,9 +34,9 @@ function Footer() {
           </p>
         </div>
 
-        <div className="footer-col-4">
+        <div className="footer-col-4" style={{ color: "#fff" }}>
           <h3>Follow us</h3>
-          <ul style={{ listStyle: "none", padding: 1, color: "#fff" }}>
+          <ul style={{ listStyle: "none", padding: 0 }}>
             <li>
               <a href="https://www.facebook.com/" style={{ color: "#fff" }}>
                 Facebook

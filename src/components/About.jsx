@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css"
+import "./index.css";
 
 function About() {
   return (
@@ -19,6 +19,31 @@ function About() {
         provides exceptional care, education, and support to pets and their
         families.
       </p>
+      <h2>Our Values</h2>
+      <ul>
+        <li>
+          Compassion: We treat all pets with kindness and empathy, and strive to
+          make their visit as comfortable as possible.
+        </li>
+        <li>
+          Excellence: We are committed to providing the highest quality care and
+          staying up-to-date with the latest advances in veterinary medicine.
+        </li>
+        <li>
+          Collaboration: We work closely with pet owners to develop personalized
+          treatment plans that meet the individual needs of each pet.
+        </li>
+        <li>
+          Education: We believe in educating pet owners about their pet's health
+          and well-being, and providing them with the knowledge and resources
+          they need to make informed decisions.
+        </li>
+        <li>
+          Community: We are proud to be a part of our local community, and
+          strive to make a positive impact on the lives of pets and their
+          families.
+        </li>
+      </ul>
     </div>
   );
 }
