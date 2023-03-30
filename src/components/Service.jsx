@@ -41,6 +41,23 @@ function Services() {
             care and support for your pets.
           </p>
         </div>
+        <div>
+          <img src="src/components/image/cat - grooming.jpg" alt="Grooming" />
+          <h2>Grooming</h2>
+          <p>
+            We offer grooming services to help keep your pets looking and
+            feeling their best. This includes bathing, haircuts, nail trimming,
+            and more.
+          </p>
+        </div>
+        <div>
+          <img src="src/components/image/boarding.jpg" alt="Boarding" />
+          <h2>Boarding</h2>
+          <p>
+            We provide boarding services for pets when you're away. Our facility
+            is designed to ensure your pet's safety, comfort, and well-being.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
-body{
+body {
   background-color: #fff;
 }
+
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 72px;
+  height: 70px;
   background-color: #F4E3E3;
   display: flex;
   justify-content: space-between;
@@ -14,8 +15,17 @@ body{
 }
 
 .logo {
-  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
   color: #000;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  margin-right: 5px;
+  margin-bottom: 14px;
 }
 
 .nav ul {
@@ -32,28 +42,57 @@ body{
 
 .nav li a {
   text-decoration: none;
-  color: #000
-  ;
+  color: #000;
   font-weight: bold;
   font-size: 16px;
 }
-.home {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
+
+.signup-btns {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
-.image-section img {
-  width: 100%;
-  max-width: 500px;
+.signup-btns:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 115vh;
+  background-image: url('src/components/image/cat.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  background-size: "fit";
+  height: "400px";
 }
 
 .text-section {
-  width: 50%;
-  margin-right: 50px;
+  text-align: center;
+  margin-left: 150px;
+  font-style: bold;
 }
+
+.text-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 /* footer */
 .signup-btns {
   background-color: #0095c6;
@@ -127,3 +166,77 @@ body{
   font-size: 16px;
   color: #777;
 }
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0.5;
+  width: 100%;
+}
+
+.footer-col-3 ul,
+.footer-col-4 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col-3 li,
+.footer-col-4 li {
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+}
+
+.footer-col-3 a,
+.footer-col-4 a {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer p {
+  text-align: center;
+  margin-top: 20px;
+}
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 300px; /* set a maximum width to prevent it from being too large */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+

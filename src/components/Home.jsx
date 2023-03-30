@@ -1,18 +1,13 @@
 import React from "react";
 import About from "./About";
 import Services from "./Service";
-// import image from  "./image"
+import "./index.css"
 
 function Home() {
   return (
     <>
       <div className="home">
-        <div className="image-section">
-          <img
-            src="src/components/image/alvan-nee-ZCHj_2lJP00-unsplash.jpg"
-            alt="Pet"
-          />
-        </div>
+
         <div className="text-section">
           <h1>Welcome to Our Veterinary Service App</h1>
           <p>

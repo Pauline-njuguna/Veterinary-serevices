@@ -5,7 +5,10 @@ import "./index.css";
 function Navbar() {
   return (
     <nav className="nav">
+      <div className="logo">
+      <img  src="src/components/image/cat logo.jpg" alt="logo"></img>
       <h1 className="logo">M-VET</h1>
+      </div>
       <ul>
         <li>
           <a href="/">Home</a>
