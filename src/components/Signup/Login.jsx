@@ -78,13 +78,11 @@ function Login() {
         </button>
         <div>{error}</div>
       </form>
+     
       <p>
-        Don't have an account?{" "}
-        <span className="reghere">
-          <Link to="/signup-login">Sign Up</Link>
-        </span>
-      </p>
-      
+  Don't have an account?<Link to="/signup-login" className="reghere">Sign Up</Link>
+</p>
+
     </div>
   );
 }

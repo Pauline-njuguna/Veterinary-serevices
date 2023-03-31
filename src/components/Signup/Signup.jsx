@@ -134,11 +134,9 @@ function Signup() {
       </form>
       {/* Already have an account link */}
       <p>
-        Already have an account?{" "}
-        <span className="reghere">
-          <Link to="/login">Log In</Link>
-        </span>
-      </p>
+  Already have an account?<Link to="/login" className="reghere">Log In</Link>
+</p>
+
     </div>
   );
 }

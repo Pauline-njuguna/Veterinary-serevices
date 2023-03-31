@@ -347,3 +347,7 @@ ul li {
   color: #fff;
   
 }
+.reghere {
+  display: inline-block; /* display the span element as an inline-block */
+  margin-left: 5px; /* add a left margin to create space between the question and the link */
+}
