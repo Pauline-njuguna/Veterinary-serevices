@@ -14,6 +14,7 @@ const AppointmentCalendar = () => {
   return (
     <div className="appointment-calendar">
       <h3 className="calendar-title">Appointment Calendar</h3>
+      <p> Kindly select an appointment date to book.</p>
       <div className="date-picker-wrapper">
         <DatePicker
           selected={startDate}
