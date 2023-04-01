@@ -14,7 +14,7 @@ const PetForm = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/pets", {
+      const response = await fetch("http://localhost:3000/pet", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

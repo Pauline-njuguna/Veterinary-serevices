@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
+// import Profile from "./profile/profile";
+
 
 function Navbar() {
   return (
@@ -25,13 +27,14 @@ function Navbar() {
         <li>
           <Link to="/pet">Add pet</Link>
         </li>
-      
+
         <li>
           <button className="signup-btns">
             <Link to="/signup-login">Sign up</Link>
           </button>
         </li>
       </ul>
+      {/* <Profile /> */}
     </nav>
   );
 }

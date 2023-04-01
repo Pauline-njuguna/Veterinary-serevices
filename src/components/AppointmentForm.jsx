@@ -13,10 +13,13 @@ function AppointmentForm() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const appointment = {
-      service: selectedService,
-      date: selectedDate,
-    };
+     const appointment = {
+       service: selectedService,
+       date: selectedDate,
+       user_id: [],
+       pet_id: [],
+       date_time: selectedDate,
+     };
 
     fetch("http://localhost:3000/appointments", {
       method: "POST",
@@ -72,6 +75,7 @@ function AppointmentForm() {
       </div>
 
       <button type="submit">Submit</button>
+      
       <AppointmentCalendar selectedDate={selectedDate} />
     </form>
   );
