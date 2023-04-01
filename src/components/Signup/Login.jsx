@@ -1,38 +1,37 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
 function Login() {
   // Declearing state variables and initialize them to empty values
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const [error, setError] = useState("");
 
- const handleLogin = async (event) => {
-   event.preventDefault(); // Prevents form from submitting
-   try {
-     const response = await fetch("http://localhost:3000/users/register", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify({
-         email: email,
-         password: password,
-       }),
-     });
+  const handleLogin = async (event) => {
+    event.preventDefault(); // Prevents form from submitting
+    try {
+      const response = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      });
 
-     if (!response.ok) {
-       const errorData = await response.json();
-       throw new Error(errorData.message);
-     }
+      if (response.ok) {
+        navigate("/appointments");
+      }
 
-     // TODO: Handle successful login
-   } catch (error) {
-     setError(error.message); // Sets error message if an error occurs
-   }
- };
-
+      // TODO: Handle successful login
+    } catch (error) {
+      setError(error.message); // Sets error message if an error occurs
+    }
+  };
 
   // Function to handle input changes and add/remove CSS class accordingly
   const handleInputChange = (e) => {
@@ -78,11 +77,12 @@ function Login() {
         </button>
         <div>{error}</div>
       </form>
-     
       <p>
-  Don't have an account?<Link to="/signup-login" className="reghere">Sign Up</Link>
-</p>
-
+        Don't have an account?{" "}
+        <span className="reghere">
+          <Link to="/signup-login">Sign Up</Link>
+        </span>
+      </p>
     </div>
   );
 }

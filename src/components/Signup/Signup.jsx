@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
 function Signup() {
@@ -7,7 +7,8 @@ function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pnumber, setPhoneNumber] = useState("");
-  const [location, setLocation] = useState("");
+  const navigate = useNavigate();
+  const [password_confirmation, setPasswordConfirmation] = useState("");
 
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -24,17 +25,16 @@ function Signup() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          Name: name,
+          name: name,
           email: email,
           phone: pnumber,
-          location: location,
+          password_confirmation: password_confirmation,
           password: password,
         }),
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message);
+      if (response.ok) {
+        navigate("/login");
       }
 
       // TODO: Handle successful registration
@@ -100,18 +100,7 @@ function Signup() {
           />
           <span> Email </span>
         </div>
-        <div className="inputBox">
-          <input
-            type="text"
-            value={location}
-            onChange={(e) => {
-              setLocation(e.target.value); // Update state variable for last name
-              handleInputChange(e);
-            }}
-            required
-          />
-          <span>Location</span>
-        </div>
+
         {/* Password input box */}
         <div className="inputBox">
           <input
@@ -125,6 +114,18 @@ function Signup() {
           />
           <span>Password</span>
         </div>
+        <div className="inputBox">
+          <input
+            type="password"
+            value={password_confirmation}
+            onChange={(e) => {
+              setPasswordConfirmation(e.target.value); // Update state variable for last name
+              handleInputChange(e);
+            }}
+            required
+          />
+          <span>Confirm Password</span>
+        </div>
         {/* Register button */}
         <button type="submit" className="signup-btn">
           Sign Up
@@ -134,9 +135,11 @@ function Signup() {
       </form>
       {/* Already have an account link */}
       <p>
-  Already have an account?<Link to="/login" className="reghere">Log In</Link>
-</p>
-
+        Already have an account?{" "}
+        <span className="reghere">
+          <Link to="/login">Log In</Link>
+        </span>
+      </p>
     </div>
   );
 }

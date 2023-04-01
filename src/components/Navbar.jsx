@@ -25,12 +25,7 @@ function Navbar() {
         <li>
           <Link to="/pet">Add pet</Link>
         </li>
-        <li>
-          <Link to="/calendar">Calendar</Link>
-        </li>
-        {/* <li>
-          <a href="#contacts">Contacts Us</a>
-        </li> */}
+      
         <li>
           <button className="signup-btns">
             <Link to="/signup-login">Sign up</Link>

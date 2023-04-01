@@ -1,5 +1,7 @@
 body {
   background-color: #fff;
+    /* overflow: hidden; */
+
 }
 
 .nav {
@@ -7,7 +9,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 50px;
   background-color: #F4E3E3;
   display: flex;
   justify-content: space-between;
@@ -50,7 +52,7 @@ body {
 .signup-btns {
   background-color: #000;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -202,34 +204,81 @@ body {
 
 
 .appointment-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-  margin-left: 500px;
-  height: 80vh;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.appointment-form h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1px;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.services {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.date-picker {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+.appointment-calendar {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.calendar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
-label {
-  margin-bottom: 5px;
+.selected-date {
+  font-size: 16px;
+  margin: 0;
 }
 
-input,
-select {
-  width: 100%;
-  max-width: 300px; /* set a maximum width to prevent it from being too large */
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
 .footer {
   background-color: #000;
   color: #fff;
@@ -346,8 +395,4 @@ ul li {
   background-color: #333;
   color: #fff;
   
-}
-.reghere {
-  display: inline-block; /* display the span element as an inline-block */
-  margin-left: 5px; /* add a left margin to create space between the question and the link */
 }

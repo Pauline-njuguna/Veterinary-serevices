@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import "./components/index.css";
@@ -6,14 +6,22 @@ import Home from "./components/Home";
 
 import Petform from "./components/PetForm";
 import AppointmentForm from "./components/AppointmentForm";
-import AppointmentCalendar from "./components/AppointmentCalendar";
 
-import SignUp from "./components/Signup/Signup"
-import LogIn from "./components/Signup/Login"
-import Contacts from "./components/Contacts"
+import SignUp from "./components/Signup/Signup";
+import LogIn from "./components/Signup/Login";
+import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 
 function App() {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost:3000/users")
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        setUser(response);
+      });
+  }, []);
   return (
     <>
       <Navbar />
@@ -24,11 +32,6 @@ function App() {
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/appointments" element={<AppointmentForm />} />
         <Route exact path="/pet" element={<Petform />} />
-        <Route
-          exact
-          path="/calendar"
-          element={<AppointmentCalendar />}
-        />
         <Route exact path="/contacts" element={<Contacts />} />
       </Routes>
       <Footer />
